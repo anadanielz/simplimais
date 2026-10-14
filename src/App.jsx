@@ -186,7 +186,7 @@ function paginaCadastro() {
   return (
     <header className="hero">
       <div className="logo">
-        src={`${import.meta.env.BASE_URL}logo.png`}
+        <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Simpli Mais" className="logo-imagem" />
       </div>
       <p>Como podemos simplificar sua vida hoje?</p>
     </header>
