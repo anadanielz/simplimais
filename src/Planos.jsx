@@ -5,11 +5,7 @@ export default function Planos({ irParaLogin, irParaCadastro }) {
   return (
     <main className="tela-conta">
       <section className="area-planos">
-        <img
-          src="/logo.png"
-          alt="Simpli Mais"
-          className="logo-imagem"
-        />
+        src={`${import.meta.env.BASE_URL}logo.png`}
 
         <h1>Escolha seu plano</h1>
         <p>Organize seus cuidados de saúde do seu jeito.</p>
