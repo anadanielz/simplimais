@@ -31,7 +31,8 @@ button {
 }
 
 .aplicativo {
-  width: min(100%, 780px);
+  width: 100%;
+  max-width: 1440px;
   min-height: 100vh;
   margin: 0 auto;
   padding-bottom: 90px;
@@ -719,5 +720,65 @@ select {
 
   .cartao-conta {
     padding: 26px 18px;
+  }
+}
+
+/* Layout para computadores */
+@media (min-width: 900px) {
+  .aplicativo {
+    padding: 24px 40px 110px;
+  }
+
+  main {
+    padding: 32px 40px;
+  }
+
+  .hero {
+    margin: 0;
+    min-height: 280px;
+    border-radius: 30px;
+  }
+
+  .categorias {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .cartao-categoria {
+    min-height: 170px;
+    padding: 24px;
+  }
+
+  .menu-inferior {
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(100% - 48px, 1360px);
+    bottom: 0;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .menu-inferior button {
+    font-size: 13px;
+    gap: 6px;
+  }
+
+  .menu-inferior svg {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Ajustes para celulares */
+@media (max-width: 600px) {
+  .aplicativo {
+    padding: 0 0 90px;
+  }
+
+  main {
+    padding: 18px 16px 25px;
+  }
+
+  .categorias {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
