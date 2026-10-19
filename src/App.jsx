@@ -23,31 +23,36 @@ const medicamentos = [
     nome: 'Paracetamol',
     categoria: 'Dor e febre',
     descricao: 'Usado para aliviar dores leves a moderadas e reduzir a febre.',
-    informacao: 'O paracetamol é um analgésico e antitérmico. Leia a bula e procure orientação profissional antes de usar.'
+    informacao: 'O paracetamol é um analgésico e antitérmico. Leia a bula e procure orientação profissional antes de usar.',
+    cuidados: 'Não use se tiver alergia ao paracetamol ou a componentes da fórmula. Não associe com outros medicamentos que também contenham paracetamol, pois isso pode causar superdosagem e lesão no fígado. Na gravidez, use somente com orientação profissional.'
   },
   {
     nome: 'Metformina',
     categoria: 'Diabetes',
     descricao: 'Medicamento utilizado no tratamento do diabetes tipo 2.',
-    informacao: 'A metformina pode fazer parte do tratamento do diabetes tipo 2 conforme prescrição.'
+    informacao: 'A metformina pode fazer parte do tratamento do diabetes tipo 2 conforme prescrição.',
+    cuidados: 'Informe ao profissional de saúde se tiver problemas nos rins ou no fígado, consumir álcool em excesso ou estiver programando exames com contraste. Essas situações podem exigir avaliação especial. Não interrompa o tratamento por conta própria.'
   },
   {
     nome: 'Losartana',
     categoria: 'Hipertensão',
     descricao: 'Utilizada no controle da pressão arterial, conforme prescrição.',
-    informacao: 'A losartana é usada para tratar pressão alta em algumas pessoas. O acompanhamento médico é importante.'
+    informacao: 'A losartana é usada para tratar pressão alta em algumas pessoas. O acompanhamento médico é importante.',
+    cuidados: 'É necessário acompanhamento da pressão arterial e da função dos rins, além de avaliação do potássio no sangue quando indicada. Não deve ser usada durante a gravidez; se descobrir que está grávida enquanto utiliza este medicamento, procure o profissional que acompanha seu tratamento imediatamente.'
   },
   {
     nome: 'Ácido fólico',
     categoria: 'Gravidez',
     descricao: 'Vitamina importante em fases específicas da gestação.',
-    informacao: 'A necessidade e a dose devem ser discutidas com um profissional de saúde.'
+    informacao: 'A necessidade e a dose devem ser discutidas com um profissional de saúde.',
+    cuidados: 'Na gestação, a suplementação de ácido fólico é frequentemente recomendada. A necessidade e a quantidade devem ser orientadas pelo profissional do pré-natal.'
   },
   {
     nome: 'Loratadina',
     categoria: 'Alergias',
     descricao: 'Antialérgico usado para aliviar alguns sintomas alérgicos.',
-    informacao: 'Confira a bula e consulte um profissional se tiver dúvidas.'
+    informacao: 'Confira a bula e consulte um profissional se tiver dúvidas.',
+    cuidados: 'Não use se tiver alergia à loratadina ou a algum componente da fórmula. Informe ao profissional de saúde se tiver doença no fígado ou nos rins, estiver grávida ou amamentando, ou utilizar outros medicamentos.'
   }
 ];
 
@@ -869,6 +874,15 @@ function consultas() {
               {medicamentoSelecionado.informacao ||
                 medicamentoSelecionado.descricao}
             </p>
+            {medicamentoSelecionado.cuidados && (
+              <div className="aviso alerta">
+              <Info size={20} />
+              <div>
+              <strong>Contraindicações e cuidados</strong>
+              <p>{medicamentoSelecionado.cuidados}</p>
+              </div>
+              </div>
+              )}
 
             <Aviso alerta>
               Informação educativa. Confira a bula e procure orientação profissional.
