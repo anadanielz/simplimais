@@ -489,21 +489,23 @@ select {
   text-align: center;
 }
   
-
-.logo {
+.hero .logo {
+  position: static;
+  width: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  margin: 0 auto;
 }
 
-.logo-imagem {
+.hero .logo-imagem {
   display: block;
   width: 250px;
   max-width: 100%;
   height: auto;
-  object-fit: contain;
   margin: 0 auto;
+  object-fit: contain;
 }
 
   main {
@@ -553,9 +555,23 @@ select {
     font-size: 14px;
   }
 }
-.logo {
-  width: 250px;
+
+.hero .logo {
+  position: static;
+  width: 100%;
   height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.hero .logo-imagem {
+  display: block;
+  width: 250px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
   object-fit: contain;
 }
 
